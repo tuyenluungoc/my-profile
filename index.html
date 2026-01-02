@@ -6,6 +6,25 @@
   <title>Ngọc Tuyên | Hello</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+
+      if (revealTop < windowHeight - 120) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+
 <body>
 
   <!-- HEADER -->
@@ -21,7 +40,7 @@
   </header>
 
   <!-- ABOUT -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <h2>Giới thiệu</h2>
       <p>
@@ -35,7 +54,7 @@ I have worked in many different jobs and gained a lot of experience. I want to d
   </section>
 
   <!-- SKILLS -->
-  <section class="section gray">
+  <section class="section gray reveal">
     <div class="container">
       <h2>Kỹ năng</h2>
       <div class="skills">
@@ -53,7 +72,7 @@ I have worked in many different jobs and gained a lot of experience. I want to d
   </section>
 
   <!-- PROJECTS -->
-<section class="section gray">
+<section class="section gray reveal">
   <div class="container">
     <h2>Dự án tiêu biểu</h2>
 
@@ -90,7 +109,9 @@ I have worked in many different jobs and gained a lot of experience. I want to d
    
     <!-- PROJECT 2 -->
 <!-- PROJECT 2 -->
-<div class="project-box marketing">
+<div class="project-box marketing reveal">
+
+  <!-- HEADER -->
 
  <div class="project-header">
     <h3>Sales & Marketing – MyKitchen Việt Nam</h3>
@@ -108,7 +129,7 @@ I have worked in many different jobs and gained a lot of experience. I want to d
   </p>
 
   <!-- IMAGE GALLERY -->
-  <div class="marketing-gallery">
+  <div class="marketing-gallery reveal">
     <div class="img-item large">
       <img src="img/mykitchen/showroom.jpg" alt="Showroom cao cấp">
       <span>Showroom & Trải nghiệm khách hàng</span>
@@ -131,7 +152,7 @@ I have worked in many different jobs and gained a lot of experience. I want to d
   </div>
 
   <!-- DESCRIPTION -->
-  <ul class="project-list marketing">
+  <ul class="project-list marketing ">
     <li>Tư vấn và bán các sản phẩm thiết bị nhà bếp, nội thất cao cấp cho khách hàng cá nhân & dự án.</li>
     <li>Quản lý fanpage, website; xây dựng nội dung sản phẩm, chương trình khuyến mãi.</li>
     <li>Viết bài giới thiệu, thông số kỹ thuật và nội dung bán hàng theo định hướng thương hiệu.</li>
@@ -143,7 +164,7 @@ I have worked in many different jobs and gained a lot of experience. I want to d
 </div>
 <!-- PROJECT 3 -->
 <!-- PROJECT 3 -->
-<div class="project-box education-pro">
+<div class="project-box education-pro reveal">
 
   <!-- Header -->
   <div class="edu-header">
@@ -197,8 +218,10 @@ I have worked in many different jobs and gained a lot of experience. I want to d
 
   <!-- CONTACT -->
   <!-- THANK YOU SECTION -->
-<section class="section thank-you">
+<!-- THANK YOU SECTION -->
+<section class="section thank-you reveal">
   <div class="container thank-you-box">
+
     <h2>Cảm ơn bạn đã dành thời gian xem portfolio</h2>
 
     <p>
@@ -207,11 +230,24 @@ I have worked in many different jobs and gained a lot of experience. I want to d
     </p>
 
     <div class="thank-actions">
-      <a href="mailto:ngoctuyenzetsu@email.com" class="btn primary">Email</a>
-      <p>Phone: 0355691456</p>
+     <a href="https://zalo.me/0355691456" target="_blank" class="btn primary">
+  💬 Liên hệ Zalo
+</a>
+
+
+      <a href="mailto:ngoctuyenzetsu@gmail.com" class="btn outline">
+        ✉️ Email
+      </a>
+    </div>
+
+    <div class="thank-social">
+      <!-- <a href="https://github.com/tuyenluungoc" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> -->
+      <a href="tel:0355691456">📞 0355 691 456</a>
     </div>
 
     <span class="thank-sign">— Ngọc Tuyên</span>
+
   </div>
 </section>
 
